@@ -7,7 +7,7 @@ const Modal = ({ onConfirm, onCancel }) => {
         <span className="close" onClick={() => onCancel()}>
           &times;
         </span>
-        <p>Eminmisiniz ?</p>
+        <p>Emin misiniz ?</p>
         <div className="button-group">
           <button onClick={() => onCancel()}>Cancel</button>
           <button onClick={() => onConfirm()}>Confirm</button>

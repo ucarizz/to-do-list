@@ -10,8 +10,8 @@ const AddTask = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    
-    if (name !== ""){
+
+    if (name?.trim() !== ""){
       handleAddTask({ id: uid(32), name, status: false });
       setstate("");
     } else{
