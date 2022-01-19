@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "18eaa7bd87f376650ddcd94c38faddd9",
+      "name": "First item",
+      "status": false
+    },
+    {
+      "id": "e9c67db007af4a8986ac700d375f48fd",
+      "name": "Second item",
+      "status": false
+    },
+    {
+      "id": "e9c67db007af4a8986ac700d375f48f3",
+      "name": "Third item",
+      "status": false
+    }
+  ]
+}

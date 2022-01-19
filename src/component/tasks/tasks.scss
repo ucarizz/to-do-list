@@ -1,0 +1,156 @@
+
+.container{
+    flex-direction: column;
+    margin: 2px;
+    width: 100%;
+    max-width: 700px;
+
+
+    ul {
+        width: 100%;
+        display: block !important;
+        margin: 0;
+        padding: 0;
+        border: 1px solid rgb(209, 207, 207);
+        border-radius: 5px;
+
+    
+        li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            font-size: 18px;
+            transition: 0.2s;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    
+            &:not(:last-child) {
+                // background: #f9f9f9;
+                border-bottom: 1px solid rgb(209, 207, 207);
+            }
+    
+            &:hover {
+                background: #ddd;
+            }
+    
+            label {
+                margin-right: auto;
+                display: block;
+                position: relative;
+                padding-left: 60px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+    
+                .checked {
+                    text-decoration: line-through;
+                }
+                input {
+                    position: absolute;
+                    left: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+    
+                    &:hover {
+                        ~ .checkmark {
+                            background-color: #ccc;
+                        }
+                    }
+                    &:checked {
+                        ~ .checkmark {
+                            background-color: #2196f3;
+    
+                            &:after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+    
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 22px;
+                    width: 22px;
+                    background-color: #eee;
+                    border: 1px solid rgb(189, 188, 188);
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        left: 6px;
+                        top: 2px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            
+            button{
+                cursor: pointer;
+                background-color: transparent;
+                color: rgb(241, 10, 10);
+                border: none;
+    
+                &:hover{
+                    opacity: .8;
+                    transform: scale(1.1);
+                }
+    
+                &:active{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+.add-item{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type=text]{
+        flex: 1;
+        padding: 10px 16px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+      
+      input[type=submit] {
+        background-color: #0e47e6;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0a41d8;
+          }
+      }
+
+      span{
+          flex-basis: 100%;
+          font-size: 12px;
+          color: red;
+          padding: 1px 0 0 2px;
+      }
+}
