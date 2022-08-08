@@ -29,7 +29,7 @@ const AddTask = () => {
         onFocus={()=> setError(false)}
       />
       <input type="submit" value="Add" />
-      {error && <span>Task Adını Buraya Girin</span>}
+      {error && <span>Task Adını Buraya Giriniz!</span>}
     </form>
   );
 };
